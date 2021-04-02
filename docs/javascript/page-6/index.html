@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Scope</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#scope">Scope</a></li>
+  </ul>
+</nav>
+    <h2 id="scope">Scope</h2>
+<p>El scope es una colección de variables, funiones y objetos al <strong>alcance</strong> del codigo.</p>
+<p>Existen dos tipos:</p>
+<p><strong>Global Scope</strong></p>
+<ul>
+<li>Las variables globales se pueden mandar a llamar en cualquier parte del programas.</li>
+</ul>
+<p><strong>Local Scope</strong></p>
+<ul>
+<li>A diferencia de las globales, las locales solo se pueden declarar en la funciones y pueden ser mandadas a llamar
+en la misma.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s2">&#34;Luis&#34;</span><span class="p">;</span><span class="c1">//scoupe global
+</span><span class="c1"></span>
+<span class="kd">function</span> <span class="nx">hola</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;hola &#34;</span> <span class="o">+</span> <span class="nx">nombre</span><span class="p">);</span>
+<span class="p">}</span><span class="nx">hola</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">adios</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s2">&#34;Ana&#34;</span><span class="p">;</span> <span class="c1">//scoupe local
+</span><span class="c1"></span>    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;adios &#34;</span> <span class="o">+</span> <span class="nx">nombre</span><span class="p">);</span>
+<span class="p">}</span><span class="nx">adios</span><span class="p">();</span>
+</code></pre></div><ul>
+<li>CONST: Es una constante la cual NO cambiara su valor en ningún momento en el futuro.</li>
+<li>VAR: Es una variable que SI puede cambiar su valor y su scope es local (dentro de una función o del bloque global).</li>
+<li>LET: Es una variable que también podrá cambiar su valor, pero solo funcionará en el bloque donde fue declarada (ciclos o  condiciones) su alcance es mucho menor que var.</li>
+</ul>
+
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-7/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-5/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

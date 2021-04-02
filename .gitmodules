@@ -1,0 +1,6 @@
+[submodule "themes/zzo"]
+	path = themes/zzo
+	url = https://github.com/zzossig/hugo-theme-zzo.git
+[submodule "themes/npq"]
+	path = themes/npq
+	url = https://github.com/saadrushd/npq-hugo.git

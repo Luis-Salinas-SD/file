@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Arreglos</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#arreglos">Arreglos</a></li>
+    <li><a href="#metodos-para-arreglos">Metodos para arreglos</a>
+      <ul>
+        <li><a href="#for-of">for of</a></li>
+        <li><a href="#for-each">for each</a></li>
+        <li><a href="#some">some</a></li>
+        <li><a href="#filter">filter</a></li>
+        <li><a href="#find">find</a></li>
+        <li><a href="#map">map</a></li>
+        <li><a href="#ordenamiento">ordenamiento</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h2 id="arreglos">Arreglos</h2>
+<p>Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.</p>
+<ul>
+<li>Declaración:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">arreglo</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;hola&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="p">{}];</span>
+</code></pre></div><ul>
+<li>Declración de un arreglo y recorrerlo con un <strong>for</strong></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">arreglo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arreglo</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">elemento</span> <span class="o">=</span> <span class="nx">arreglo</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elemento</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>
+<p>Agregar y quitar elementos de un arreglo:</p>
+<ul>
+<li>push(); <strong>agrega un elemento al final.</strong></li>
+<li>pop(); <strong>quita el ultimo elemento.</strong></li>
+<li>unshift(); <strong>agrega un elemento al incio.</strong></li>
+<li>shift(); <strong>quita un elemento al inicio.</strong></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">45</span><span class="p">];</span>
+
+<span class="nx">array</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span> <span class="c1">//agrega un elemento al final
+</span><span class="c1"></span><span class="nx">array</span><span class="p">.</span><span class="nx">pop</span><span class="p">()</span> <span class="c1">// quita el ultimo elemento.
+</span><span class="c1"></span>
+<span class="nx">array</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&#34;hola&#34;</span><span class="p">);</span> <span class="c1">//agrega un elemento al incio
+</span><span class="c1"></span><span class="nx">array</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span> <span class="c1">//quita un elemento al inicio
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+</code></pre></div><ul>
+<li>Agregar y quitar elementos de un arreglo en una <strong>posicion personalizada:</strong></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;luis&#34;</span><span class="p">,</span> <span class="s2">&#34;ana&#34;</span><span class="p">,</span> <span class="s2">&#34;dan&#34;</span><span class="p">,</span> <span class="s2">&#34;sergio&#34;</span><span class="p">,</span> <span class="s2">&#34;luchita&#34;</span><span class="p">,</span> <span class="s2">&#34;concha&#34;</span><span class="p">];</span>
+<span class="c1">//             0       1      2       3         4          5
+</span><span class="c1">//splice(#indice en el que se agrgaran, #cantidad de elementos que se van a eliminar #valores que se van a aregar 1,2,3...)
+</span><span class="c1"></span>
+<span class="nx">names</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Junico&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">);</span>
+
+<span class="c1">//Elimina el valor o valores en la poscicon descrita en este en la posicion cero vamos a eliminar 3 elementos
+</span><span class="c1"></span><span class="nx">names</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">);</span> <span class="c1">// [&#34;sergio&#34;, &#34;luchita&#34;, &#34;concha&#34;]
+</span><span class="c1"></span>
+<span class="c1">// Slice extrae en un nuevo array los valores desde [start] hasta [end -1]: No modifia el array original.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">nuevo</span> <span class="o">=</span> <span class="nx">names</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nuevo</span><span class="p">);</span> <span class="c1">//[&#34;ana&#34;, &#34;dan&#34;]
+</span></code></pre></div><h2 id="metodos-para-arreglos">Metodos para arreglos</h2>
+<p><strong>El siguiente es el arreglo que utilizaremos para ejemplos:</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">arreglo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mi">45</span><span class="p">,];</span>
+</code></pre></div><p>1.- Recorrer un arreglo con <strong>For</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">x</span> <span class="o">&lt;</span> <span class="nx">arreglo</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">x</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arreglo</span><span class="p">[</span><span class="nx">x</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="for-of">for of</h3>
+<p>2.- Recorrer un arreglo con <strong>for of</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">arreglo</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="for-each">for each</h3>
+<p>3.- <strong>forEache()</strong> sirve para recorrer un arreglo</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arreglo</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">elemento</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elemento</span><span class="p">);});</span>
+</code></pre></div><h3 id="some">some</h3>
+<p>5 <strong>some</strong>devuelve true en caso de que el elemento se encuentre en el arreglo</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arreglo</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">el</span> <span class="p">=&gt;</span> <span class="nx">el</span> <span class="o">===</span> <span class="mi">45</span><span class="p">));</span>
+</code></pre></div><h3 id="filter">filter</h3>
+<p>6 <strong>filter()</strong> sirve para eliminar un elemento del arreglo</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">arreglo</span> <span class="o">=</span> <span class="nx">arreglo</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">del</span><span class="p">)=&gt;</span> <span class="nx">del</span> <span class="o">!=</span> <span class="mi">42</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arreglo</span><span class="p">);</span>
+</code></pre></div><h3 id="find">find</h3>
+<p>7 <strong>find()</strong> metodo para buscar un elemento dentro del arreglo</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">elemento</span> <span class="o">=</span> <span class="nx">arreglo</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span> <span class="nx">num</span> <span class="p">=&gt;</span> <span class="nx">num</span> <span class="o">===</span> <span class="mi">10</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">elemento</span><span class="p">);</span>
+</code></pre></div><h3 id="map">map</h3>
+<p>8 <strong>map()</strong> genera un nuevo arreglo para una operacion definida</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span>  <span class="nx">cuadrado</span> <span class="o">=</span> <span class="nx">arreglo</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">num</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">);</span>
+</code></pre></div><h3 id="ordenamiento">ordenamiento</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">sort</span><span class="p">());</span> <span class="c1">//[1, 5, 5, 5, 6, 8, 8, 9, 9] ordena de menor a mayor
+</span><span class="c1"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">reverse</span><span class="p">());</span> <span class="c1">//[9, 9, 8, 8, 6, 5, 5, 5, 1] ordena de mayor a menor
+</span></code></pre></div>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-8/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-6/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

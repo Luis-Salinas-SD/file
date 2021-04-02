@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Clases</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#clases">Clases</a></li>
+        <li><a href="#declaración-de-una-clase">Declaración de una clase</a></li>
+        <li><a href="#herencia">Herencia</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h3 id="clases">Clases</h3>
+<p>Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para <strong>crear objetos y lidiar con la herencia.</strong></p>
+<ul>
+<li>Las <strong>clases</strong> son un modelo a seguir</li>
+<li>Un <strong>objeto</strong> es una instancia de una clase</li>
+<li>Los <strong>atributos</strong> son las caracateristicas o propiedades de objetos</li>
+<li>Los <strong>métodos</strong> son acciónes (funciones) que un objeto puede realizar</li>
+</ul>
+<h3 id="declaración-de-una-clase">Declaración de una clase</h3>
+<ul>
+<li>Las clases no reciben parametros.</li>
+<li>Las clases tienen un metodo especial que se llama <strong>constructor</strong> y recibe las propiedades del objeto, este se ejecuta en el momento de instanciar la clase.</li>
+</ul>
+<pre><code>// ++++++++++ clase ++++++++++
+class Perro{
+    // ++++++++++ constructor ++++++++++
+    constructor(nombre,genero){
+        //atributos
+        this.nombre = nombre;
+        this.genero = genero;
+    }// ++++++++++ constructor ++++++++++
+
+    //++++++++++ Metodo ++++++++++
+    ladrad(){
+        console.log(&quot;Guaf Guaf&quot;);
+    }//++++++++++ Metodo ++++++++++
+    
+}// ++++++++++ clase ++++++++++
+
+const simba = new Perro(&quot;simba&quot;,&quot;macho&quot;);
+console.log(simba);	//mandar a llamar al objeto
+simba.ladrad();	// mandar a llamar al metodo
+</code></pre><h3 id="herencia">Herencia</h3>
+<p>Para utilizar herencia se necesita la palabra reservada <strong>extends</strong> seguido de la clase padre o de la que quiere que herede.</p>
+<p>la palabra reservada <strong>super()</strong> manda a llamar al constructor de la calse padre.</p>
+<pre><code>class Perro {
+    // ++++++++++ constructor ++++++++++
+    constructor(nombre, genero) {
+        //atributos
+        this.nombre = nombre;
+        this.genero = genero;
+    } // ++++++++++ constructor ++++++++++
+
+    //++++++++++ Metodo ++++++++++
+    ladrad() {
+        console.log(` guaf guaf mi nombre es ${this.nombre}`);
+    }
+    caminar(){
+        console.log(&quot;Toy caminando&quot;);
+    }
+    //++++++++++ Metodo ++++++++++
+} // ++++++++++ clase ++++++++++
+
+const simba = new Perro(&quot;simba&quot;, &quot;macho&quot;);
+console.log(simba);//! mandar a llamar al objeto
+simba.ladrad();//! mandar a llamar al metodo
+
+
+// ############ HERENCIA ##########
+class Gato extends Perro{
+    constructor(nombre, genero, color){
+        super(nombre, genero);
+        this.color = color;
+    }
+    ladrad(){
+        console.log(`miau miau mi nombre es ${this.nombre}`);
+    }
+}
+const beto = new Gato(&quot;beto&quot;,&quot;hembra&quot;,&quot;blanco&quot;);
+console.log(beto);
+beto.ladrad();
+beto.caminar();
+</code></pre>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-11/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-9/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

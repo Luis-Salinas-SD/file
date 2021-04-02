@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Objetos - JSON</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#objetos---json">Objetos - JSON</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h3 id="objetos---json">Objetos - JSON</h3>
+<p>Declaración de un objeto JSON</p>
+<p>Puede recibir diferentes valores como:</p>
+<ul>
+<li>arreglos</li>
+<li>objetos</li>
+<li>funciones (metodos)</li>
+<li>booleans</li>
+<li>enteros</li>
+<li>strings</li>
+</ul>
+<pre><code>let video = {
+    titulo: &quot;piloto&quot;,
+    duración: 2,
+    formato: &quot;avi&quot;,
+    //!arreglo
+    arreglo: [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;],
+    //!metodo
+    inscribir: function (usuario) {
+        console.log(usuario + &quot; Esta inscrito&quot;);
+    }
+}
+</code></pre><blockquote>
+<p>Dentro de una objeto <strong>las variables</strong> son llamada <strong>propiedades o atributos.</strong></p>
+</blockquote>
+<blockquote>
+<p>Dentro de un objeto <strong>las funciones</strong> son llamadas <strong>metodos</strong>.</p>
+</blockquote>
+<p>De acuerdo al objeto anterior esto es lo que podemos hacer.</p>
+<pre><code>//! invocar una propiedad del objeto.
+console.log(video.arreglo);
+
+//! Invocar el metodo
+video.inscribir(&quot;Juan&quot;);
+
+//! Editar alguna propiedad de nuestro objeto
+video.titulo = &quot;Prueba&quot;;
+console.log(video.titulo);
+
+//! Editar alguna metodo de nuestro objeto
+video.inscribir = function () {
+    console.log(&quot;hola soy la funcion editada&quot;);
+}
+</code></pre>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-9/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-7/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

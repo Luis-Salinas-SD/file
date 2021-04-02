@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bievenidos on - Javascript -</title>
+    <link>https://www.example.com/</link>
+    <description>Recent content in Bievenidos on - Javascript -</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</copyright><atom:link href="https://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bases</title>
+      <link>https://www.example.com/javascript/page-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-1/</guid>
+      <description>Bases de Javascript Variables y Constantes  Las variables son espacios de memoria reservados para un valor, este puede ser reasignable, se pueden declarar con &amp;ldquo;var&amp;rdquo; ó &amp;ldquo;let&amp;rdquo;.
+let nombre = &amp;#34;Luis&amp;#34;; var apellido = prompt(&amp;#34;¿Cual es su apellido?&amp;#34;); Las constantes son espacios de memoria pero el valor no puede ser reasignado.(tambien son variables).
+const pi = 3.1416;  const: no puede cambiar el valor.
+  let: el scope es local.</description>
+    </item>
+    
+    <item>
+      <title>Condicionales</title>
+      <link>https://www.example.com/javascript/page-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-2/</guid>
+      <description>Condicionales Los condiconales funcionan de la siguiente manera:
+Si la primer condicion se cumple, la siguiente no se ejecuta, pero si la primera condición no se cumple se ejecuta la segunda o la siguiente hasta que se cumpla la condicion.
+if  condicion if  if (24 === 24 || &amp;#34;hola&amp;#34; === &amp;#34;hola&amp;#34;) { alert(true); } else { alert(false); } //true if-else  condicion if( ){ }else{ }  let nota = 10; if (nota &amp;lt;= 7) { console.</description>
+    </item>
+    
+    <item>
+      <title>Ciclos</title>
+      <link>https://www.example.com/javascript/page-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-3/</guid>
+      <description>Ciclos Ciclo For El bucle FOR se utiliza para repetir una o más instrucciones un determinado número de veces. De entre todos los bucles, el FOR se suele utilizar cuando sabemos seguro el número de veces que queremos que se ejecute. La sintaxis del bucle for se muestra a continuación.
+ Sintaxis
+ for (inicialización; condición; actualización) { //sentencias a ejecutar en cada iteración } 1.- imprime una serie del 1 al 10</description>
+    </item>
+    
+    <item>
+      <title>Funciones y Closure</title>
+      <link>https://www.example.com/javascript/page-4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-4/</guid>
+      <description>Funciones y Closure  La definición de una función consiste de la palabra clave (reservada) function, seguida por:  El nombre de la función (opcional). Una lista de argumentos para la función, encerrados entre paréntesis y separados por comas (,). Las sentencias JavaScript que definen la función, encerradas por llaves, { }.   Ejemplo:  function cuadrado(number) { return number * number; } Funciones declarativas y anónimas Funciones Declarativas:  En las funciones declarativas, utilizamos la palabra reservada function al inicio para poder declarar la función:  function saludar(nombre) { console.</description>
+    </item>
+    
+    <item>
+      <title>arrow-function</title>
+      <link>https://www.example.com/javascript/page-5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-5/</guid>
+      <description>Funcion flecha Una expresión de función flecha es una alternativa compacta a una expresión de función tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
+ Arrow-function  La sintaxis básica de una arrow-function es la siguiente:
+name_function = (parametros) =&amp;gt; {cuerpo_funcion} suma = (a, b) =&amp;gt; a + b //arrow-function  console.log(suma(5, 5)); //10 Ejemplos: 1.- imprimir los numeros en pantalla hasta el numero que el usuario teclea</description>
+    </item>
+    
+    <item>
+      <title>Scope</title>
+      <link>https://www.example.com/javascript/page-6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-6/</guid>
+      <description>Scope El scope es una colección de variables, funiones y objetos al alcance del codigo.
+Existen dos tipos:
+Global Scope
+ Las variables globales se pueden mandar a llamar en cualquier parte del programas.  Local Scope
+ A diferencia de las globales, las locales solo se pueden declarar en la funciones y pueden ser mandadas a llamar en la misma.  var nombre = &amp;#34;Luis&amp;#34;;//scoupe global  function hola() { alert(&amp;#34;hola &amp;#34; + nombre); }hola(); function adios(){ let nombre = &amp;#34;Ana&amp;#34;; //scoupe local  alert(&amp;#34;adios &amp;#34; + nombre); }adios();  CONST: Es una constante la cual NO cambiara su valor en ningún momento en el futuro.</description>
+    </item>
+    
+    <item>
+      <title>Arreglos</title>
+      <link>https://www.example.com/javascript/page-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-7/</guid>
+      <description>Arreglos Los arrays son objetos similares a una lista cuyo prototipo proporciona métodos para efectuar operaciones de recorrido y de mutación. Tanto la longitud como el tipo de los elementos de un array son variables.
+ Declaración:  let arreglo = [&amp;#34;hola&amp;#34;, 1, true, {}];  Declración de un arreglo y recorrerlo con un for  let arreglo = [5, 9, 6]; for (let i = 0; i &amp;lt; arreglo.length; i++) { const elemento = arreglo[i]; console.</description>
+    </item>
+    
+    <item>
+      <title>Objetos - JSON</title>
+      <link>https://www.example.com/javascript/page-8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-8/</guid>
+      <description>Objetos - JSON Declaración de un objeto JSON
+Puede recibir diferentes valores como:
+ arreglos objetos funciones (metodos) booleans enteros strings  let video = { titulo: &amp;quot;piloto&amp;quot;, duración: 2, formato: &amp;quot;avi&amp;quot;, //!arreglo arreglo: [&amp;quot;uno&amp;quot;, &amp;quot;dos&amp;quot;, &amp;quot;tres&amp;quot;], //!metodo inscribir: function (usuario) { console.log(usuario + &amp;quot; Esta inscrito&amp;quot;); } }  Dentro de una objeto las variables son llamada propiedades o atributos.
+  Dentro de un objeto las funciones son llamadas metodos.</description>
+    </item>
+    
+    <item>
+      <title>Funcion constructora</title>
+      <link>https://www.example.com/javascript/page-9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-9/</guid>
+      <description>Función Constructura A continuación se muestra una función constructora de objetos, viendo asi cómo podemos construir un objeto o varios a traves de una función.
+ Es importante mencionar que en una función constructora el metodo de esta debe de iniciar con this.nombre_metodo.
+  Función Constructora:  function Curso(titulo, duracion, formato) { //! Propiedades/Atributos this.titulo = titulo; this.duracion = duracion; this.formato = formato; //! Metodo this.inscribir = function (usuario) { console.</description>
+    </item>
+    
+    <item>
+      <title>Clases</title>
+      <link>https://www.example.com/javascript/page-10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-10/</guid>
+      <description>Clases Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
+ Las clases son un modelo a seguir Un objeto es una instancia de una clase Los atributos son las caracateristicas o propiedades de objetos Los métodos son acciónes (funciones) que un objeto puede realizar  Declaración de una clase  Las clases no reciben parametros.</description>
+    </item>
+    
+    <item>
+      <title>Clases 2.0</title>
+      <link>https://www.example.com/javascript/page-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/javascript/page-11/</guid>
+      <description>Clases Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
+ Las clases son un modelo a seguir Un objeto es una instancia de una clase Los atributos son las caracateristicas o propiedades de objetos Los métodos son acciónes (funciones) que un objeto puede realizar  Declaración de una clase  Las clases no reciben parametros.</description>
+    </item>
+    
+    <item>
+      <title>get in touch</title>
+      <link>https://www.example.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.example.com/contact/</guid>
+      <description>  Send  </description>
+    </item>
+    
+  </channel>
+</rss>

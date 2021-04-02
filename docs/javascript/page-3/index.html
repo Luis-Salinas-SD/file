@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Ciclos</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ciclo-for">Ciclo For</a></li>
+    <li><a href="#uso-de-continue-y-breake">Uso de <strong>continue</strong> y <strong>breake</strong></a>
+      <ul>
+        <li><a href="#continue">continue</a></li>
+        <li><a href="#breake">breake</a></li>
+      </ul>
+    </li>
+    <li><a href="#ciclo-do-while">Ciclo DO-WHILE</a></li>
+    <li><a href="#ciclo-while">Ciclo WHILE</a></li>
+    <li><a href="#switch">SWITCH</a></li>
+  </ul>
+</nav>
+    <h1 id="ciclos">Ciclos</h1>
+<h2 id="ciclo-for">Ciclo For</h2>
+<p>El bucle FOR se utiliza para repetir una o más instrucciones un determinado número de veces. De entre todos los bucles, el FOR se suele utilizar cuando sabemos seguro el número de veces que queremos que se ejecute. La sintaxis del bucle for se muestra a continuación.</p>
+<blockquote>
+<p><strong>Sintaxis</strong></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="nx">inicialización</span><span class="p">;</span> <span class="nx">condición</span><span class="p">;</span> <span class="nx">actualización</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//sentencias a ejecutar en cada iteración
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>1.- imprime una serie del 1 al 10</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>2.- imprime los multiplos de 7</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="uso-de-continue-y-breake">Uso de <strong>continue</strong> y <strong>breake</strong></h2>
+<h3 id="continue">continue</h3>
+<ul>
+<li>continue = ignora la sentencia</li>
+<li>no imprimir los multiplos de 7</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">continue</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><ul>
+<li>no imprime los multiplos de 5</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">continue</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="breake">breake</h3>
+<ul>
+<li>breake = romper el ciclo despues de llegue a 5</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">n</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="ciclo-do-while">Ciclo DO-WHILE</h2>
+<p>El ciclo do-while primero realiza la acción y despues evalua la condicion.</p>
+<blockquote>
+<p><strong>sintaxis</strong></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">do</span> <span class="nx">sentencia</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">condición</span><span class="p">);</span>
+</code></pre></div><p>1.- Números del 1 al 5</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//numeros del uno al 5
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+  <span class="nx">num</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">);</span>
+</code></pre></div><p>2.- Mini-loggin</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//mini login (solo logica)
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">password</span> <span class="o">=</span> <span class="s2">&#34;Luis&#34;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pas</span><span class="p">;</span>
+<span class="k">do</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">pas</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Constraseña&#34;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">password</span> <span class="o">!==</span> <span class="nx">pas</span><span class="p">);</span>
+</code></pre></div><h2 id="ciclo-while">Ciclo WHILE</h2>
+<p>El ciclo while mientras se cumpla la condicion realiza la sentencia.</p>
+<blockquote>
+<p><strong>sintaxis</strong></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">while</span> <span class="p">(</span><span class="cm">/*condicion*/</span><span class="p">){</span>
+<span class="c1">//sentencia
+</span><span class="c1"></span><span class="p">}</span> <span class="p">;</span>
+</code></pre></div><p>1.- Cuenta regresiva del 10 al 0</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">numero</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">numero</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//   alert(numero);
+</span><span class="c1"></span>  <span class="nx">numero</span><span class="o">--</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numero</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">numero</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//Ejercicio:
+</span><span class="c1"></span><span class="kd">var</span> <span class="nx">edad</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Dime tu edad&#34;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">edad</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</code></pre></div><h2 id="switch">SWITCH</h2>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Dame un numero del 1 al 3&#34;</span><span class="p">);</span>
+<span class="k">switch</span> <span class="p">(</span><span class="nx">answer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">case</span> <span class="s2">&#34;1&#34;</span><span class="o">:</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Bad Bunny&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="s2">&#34;2&#34;</span><span class="o">:</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;50 cent&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">case</span> <span class="s2">&#34;3&#34;</span><span class="o">:</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Maluma&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;tienes que colocar un numero del 1 al 3&#34;</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-4/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-2/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Bases</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#variables-y-constantes-a-idchapter-1a">Variables y Constantes <!-- raw HTML omitted --><!-- raw HTML omitted --></a></li>
+    <li><a href="#números-y-operadores">Números y Operadores</a></li>
+    <li><a href="#booleans">Booleans</a></li>
+    <li><a href="#operadores-de-comparación">Operadores de Comparación.</a></li>
+    <li><a href="#operadores-lógicos">Operadores Lógicos</a>
+      <ul>
+        <li><a href="#operador-and">Operador AND</a></li>
+        <li><a href="#operador-or">Operador OR</a></li>
+        <li><a href="#operador-not">Operador NOT</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h1 id="bases-de-javascript">Bases de Javascript</h1>
+<h2 id="variables-y-constantes-a-idchapter-1a">Variables y Constantes <!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Las variables son espacios de memoria reservados para un valor, este puede ser reasignable, se pueden declarar con <strong><em>&ldquo;var&rdquo;</em></strong> ó <strong><em>&ldquo;let&rdquo;</em></strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="s2">&#34;Luis&#34;</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">apellido</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;¿Cual es su apellido?&#34;</span><span class="p">);</span>
+</code></pre></div><p>Las <strong><em>constantes</em></strong> son espacios de memoria pero el valor no puede ser reasignado.(tambien son variables).</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">pi</span> <span class="o">=</span> <span class="mf">3.1416</span><span class="p">;</span>
+</code></pre></div><blockquote>
+<p><strong>const:</strong> no puede cambiar el valor.</p>
+</blockquote>
+<blockquote>
+<p><strong>let:</strong> el scope es local.</p>
+</blockquote>
+<blockquote>
+<p><strong>var:</strong> el scope es global (es mejor dejar de utilizar var).</p>
+</blockquote>
+<h2 id="números-y-operadores">Números y Operadores</h2>
+<p>Operaciones aritmeticas basicas.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">suma</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//4
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">resta</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//0
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">division</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//5
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">mult</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">//4
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">resi</span> <span class="o">=</span> <span class="mi">9</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// residuo
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">cuad</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 8
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuad</span><span class="p">);</span>
+</code></pre></div><h2 id="booleans">Booleans</h2>
+<p>Los booleanos solo retornar un valor <strong><em>true</em></strong> o <strong><em>false</em></strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">new</span> <span class="nb">Boolean</span><span class="p">(</span><span class="nx">valor</span><span class="p">);</span>
+</code></pre></div><blockquote>
+<p>Valores que retornan <strong><em>false</em></strong>
+(<strong><em>undefined, NaN, null, 0, -0, false</em></strong>).</p>
+</blockquote>
+<h2 id="operadores-de-comparación">Operadores de Comparación.</h2>
+<p><strong>igualdad ==</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">igual</span><span class="p">;</span>
+<span class="nx">igual</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">//true
+</span><span class="c1"></span><span class="nx">alert</span><span class="p">(</span><span class="nx">igual</span><span class="p">);</span>
+</code></pre></div><p><strong>identico ===</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">igual</span><span class="p">;</span>
+<span class="nx">igual</span> <span class="o">=</span> <span class="s2">&#34;a&#34;</span> <span class="o">===</span> <span class="s2">&#34;a&#34;</span><span class="p">;</span>
+<span class="c1">//true
+</span></code></pre></div><blockquote>
+<p><strong>===</strong> el comparador identico evalua el tipo de dato y el valor.</p>
+</blockquote>
+<p><strong>desigualdad !==</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">desigual</span><span class="p">;</span>
+<span class="nx">desigual</span> <span class="o">=</span> <span class="s2">&#34;adios&#34;</span> <span class="o">!==</span> <span class="s2">&#34;hola&#34;</span><span class="p">;</span> <span class="c1">//true
+</span></code></pre></div><p><strong>Mayor que &gt;</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mayor</span><span class="p">;</span>
+<span class="nx">mayor</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">//true
+</span></code></pre></div><p><strong>Menor que &lt;</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">menor</span><span class="p">;</span>
+<span class="nx">menor</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">;</span> <span class="c1">//true
+</span></code></pre></div><p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h2 id="operadores-lógicos">Operadores Lógicos</h2>
+<p>Los operadores lógicos se usan típicamente con valores Boolean. En tal caso, regresan un valor Boolean (True ó False) y son los siguientes:</p>
+<ul>
+<li>AND</li>
+<li>OR</li>
+<li>NOT</li>
+</ul>
+<h3 id="operador-and">Operador AND</h3>
+<ul>
+<li>EN EL OPERADOR <strong><em>AND</em></strong> AMBAS CONDICIONES DEBEN SER VERDADERAS(TRUE) DE LO CONTRARIO RETORNA UN VALOR (FALSE)</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="mi">24</span> <span class="o">===</span> <span class="mi">24</span> <span class="o">&amp;&amp;</span> <span class="s2">&#34;hola&#34;</span> <span class="o">===</span> <span class="s2">&#34;hola&#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//true
+</span><span class="c1"></span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">24</span> <span class="o">===</span> <span class="mi">24</span> <span class="o">&amp;&amp;</span> <span class="s2">&#34;hola&#34;</span> <span class="o">===</span> <span class="mi">13</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// false
+</span></code></pre></div><h3 id="operador-or">Operador OR</h3>
+<ul>
+<li>EN EL OPERADOR OR <strong>SOLO UNA CONDICION DEBE SER VERDADERA</strong></li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="mi">24</span> <span class="o">===</span> <span class="mi">24</span> <span class="o">||</span> <span class="s2">&#34;hola&#34;</span> <span class="o">===</span> <span class="s2">&#34;hola&#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//true
+</span><span class="c1"></span>
+<span class="k">if</span> <span class="p">(</span><span class="mi">24</span> <span class="o">===</span> <span class="mi">24</span> <span class="o">||</span> <span class="s2">&#34;hola&#34;</span> <span class="o">===</span> <span class="s2">&#34;ADIOS&#34;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//false
+</span></code></pre></div><h3 id="operador-not">Operador NOT</h3>
+<ul>
+<li>sirve para <strong>negar</strong> una condicion verdadera con el simbolo !</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="o">!</span><span class="p">(</span><span class="mi">25</span> <span class="o">===</span> <span class="mi">25</span><span class="p">)</span> <span class="o">||</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span>
+<span class="c1">//false
+</span></code></pre></div>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-2/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a class="grayed-out" href="javascript:void()"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

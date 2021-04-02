@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">Funciones y Closure</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#funciones-y-closure">Funciones y Closure</a></li>
+        <li><a href="#funciones-declarativas-y-anónimas">Funciones <strong>declarativas</strong> y <strong>anónimas</strong></a></li>
+        <li><a href="#closure">Closure</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h3 id="funciones-y-closure">Funciones y Closure</h3>
+<ul>
+<li>La definición de una función consiste de la palabra clave (reservada) function, seguida por:
+<ul>
+<li>El <strong>nombre</strong> de la función (opcional).</li>
+<li>Una lista de <strong>argumentos</strong> para la función, encerrados entre paréntesis y separados por comas (,).</li>
+<li>Las <strong>sentencias</strong> JavaScript que definen la función, encerradas por llaves, { }.</li>
+</ul>
+</li>
+<li>Ejemplo:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">cuadrado</span><span class="p">(</span><span class="nx">number</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">number</span> <span class="o">*</span> <span class="nx">number</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="funciones-declarativas-y-anónimas">Funciones <strong>declarativas</strong> y <strong>anónimas</strong></h3>
+<h4 id="funciones-declarativas">Funciones Declarativas:</h4>
+<ul>
+<li>En las funciones declarativas, utilizamos la palabra reservada <strong>function</strong> al inicio para poder declarar la función:</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">saludar</span><span class="p">(</span><span class="nx">nombre</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">saludar</span><span class="p">(</span><span class="s2">&#34;Diego&#34;</span><span class="p">);</span>
+</code></pre></div><h4 id="funciones-anónimas">Funciones Anónimas:</h4>
+<ul>
+<li>La declaración se inicia con la palabra reservada (<strong>var, let, const</strong>), donde se generará una variable que guardará un función anónima.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nombre</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">nombre</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola </span><span class="si">${</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">nombre</span><span class="p">(</span><span class="sb">`Diego`</span><span class="p">);</span>
+</code></pre></div><h4 id="en-una-funcion-imprime-un-numero-del-0-hasta-el-que-el-usuario-quiere">En una funcion imprime un numero del 0 hasta el que el usuario quiere:</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;introduce un numero&#34;</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">cuenta</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">num</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="s2">&#34;\n&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">cuenta</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+</code></pre></div><h4 id="funcion-que-convierte-cadenas-con-minusculas-a-cadenas-con-mayusculas">Funcion que convierte cadenas con minusculas a cadenas con mayusculas</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">nom</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Ingresa tu nombre&#34;</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">NombreMayus</span><span class="p">(</span><span class="nx">nom</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">nombre</span> <span class="o">=</span> <span class="nx">nom</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nombre</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">NombreMayus</span><span class="p">(</span><span class="nx">nom</span><span class="p">);</span>
+</code></pre></div><h4 id="funcion-que-calcula-el-cuadrado-de-una-funcion">Funcion que calcula el cuadrado de una funcion</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">cuadrado</span><span class="p">(</span><span class="nx">numero</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">numero</span> <span class="o">*</span> <span class="nx">numero</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cuadrado</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+</code></pre></div><h3 id="closure">Closure</h3>
+<p>Un closure es una función dentro de otra funcion que está disponible sólo dentro del cuerpo de esa fucnión y que tiene accesos a las variables de la función dónde fue declarda.</p>
+<ul>
+<li>sintaxis</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// funcion padre
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">iniciar</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;luis&#34;</span><span class="p">;</span>
+  <span class="c1">// funcion hijo
+</span><span class="c1"></span>  <span class="kd">function</span> <span class="nx">mostrar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">mostrar</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">iniciar</span><span class="p">();</span>
+</code></pre></div><h4 id="otros-ejemplos-de-closure">otros ejemplos de closure</h4>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// Funcion 1 () Closure
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">fun1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">fun2</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">fun1</span><span class="p">(</span><span class="nx">fun2</span><span class="p">);</span>
+<span class="c1">// Funcion 2
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">fun2</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Adios mundo&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">accion</span><span class="p">(</span><span class="nx">hablar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">hablar</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">decirHola</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hola amicos&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">accion</span><span class="p">(</span><span class="nx">decirHola</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">accion</span><span class="p">(</span><span class="nx">hablar</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">hablar</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">accion</span><span class="p">(</span><span class="kd">function</span> <span class="nx">decirHola</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hola amicos como estan&#34;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-5/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-3/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>

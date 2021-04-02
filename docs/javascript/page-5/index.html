@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="your description">
+    <meta name="Author" content="Luis Salinas SD">
+    <meta name="keywords" content="hugo blog">
+    <link rel="stylesheet" href=https://www.example.com/css/syntax.css>
+    <link rel="stylesheet" href=https://www.example.com/css/style.css>
+    <script src="https://kit.fontawesome.com/1b7478c139.js" crossorigin="anonymous"></script>
+    <title>- Javascript -</title>
+  </head><body><aside id="sidenav">
+    <header>
+    
+
+    <a id="branding" href=https://www.example.com>
+        
+            - Javascript -
+        
+    </a>
+    </header>
+
+    <nav>
+        
+            		
+            <a href="/"
+                
+            >
+                <i class="fas fa-home fa-sm"></i>
+                <span>home</span>
+            </a>
+        
+            		
+            <a href="/javascript/"
+                
+            >
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>blog</span>
+            </a>
+        
+    </nav>
+</aside>
+<main id="main">
+            <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
+            <div class="content">
+    
+    <h1 id="title">arrow-function</h1>
+    
+      
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#funcion-flecha">Funcion flecha</a>
+      <ul>
+        <li><a href="#ejemplos">Ejemplos:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    <h2 id="funcion-flecha">Funcion flecha</h2>
+<p>Una expresión de <strong>función flecha</strong> es una alternativa compacta a una expresión de función tradicional, <strong>pero es limitada y no se puede utilizar en todas las situaciones.</strong></p>
+<ul>
+<li><strong>Arrow-function</strong></li>
+</ul>
+<p>La sintaxis básica de una <em><strong>arrow-function</strong></em> es la siguiente:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">name_function</span> <span class="o">=</span> <span class="p">(</span><span class="nx">parametros</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="nx">cuerpo_funcion</span><span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">suma</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span> <span class="c1">//arrow-function
+</span><span class="c1"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">suma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span> <span class="c1">//10
+</span></code></pre></div><h3 id="ejemplos">Ejemplos:</h3>
+<p>1.- imprimir los numeros en pantalla hasta el numero que el usuario teclea</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;introduce el numero:&#34;</span><span class="p">);</span>
+
+<span class="nx">cuenta</span> <span class="o">=</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">writeln</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="p">}</span><span class="c1">//for
+</span><span class="c1"></span><span class="p">}</span><span class="c1">//arrow-function cuenta
+</span><span class="c1"></span><span class="nx">cuenta</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+</code></pre></div><p>2.- Aqui hay un objeto llamdo <strong>tutor</strong> y dentro de sus propiedades se encunetra una funcion, que lo que hace es imprimir el nombre con ayuda del metodo <strong>setTimeout</strong> despues de cierto tiempo.</p>
+<p>La propiedad que contiene esta funcion es <strong>fullNombre.</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">tutor</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">nombre</span><span class="o">:</span> <span class="s2">&#34;Luis&#34;</span><span class="p">,</span>
+    <span class="nx">apellido</span><span class="o">:</span> <span class="s2">&#34;Salinas&#34;</span><span class="p">,</span>
+    <span class="nx">fullNombre</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">+</span> <span class="s2">&#34; &#34;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">apellido</span><span class="p">);</span> <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// console.log(tutor.apellido);
+</span><span class="c1"></span><span class="nx">tutor</span><span class="p">.</span><span class="nx">fullNombre</span><span class="p">();</span>
+</code></pre></div>
+    
+    <div class="nav-next-prev">
+        <div class="nav-prev">
+            
+                <a href="https://www.example.com/javascript/page-6/"><i class="fas fa-chevron-left"></i></a>
+            
+        </div>
+        <a class="nav-top" href="#">top</i></a>
+        <div class="nav-next">
+            
+                <a href="https://www.example.com/javascript/page-4/"><i class="fas fa-chevron-right"></i></a>
+            
+        </div>
+    </div>
+    
+
+            </div><footer>
+<div class="footer-content">
+
+  <div class="contact-info">
+      
+          <div class="footer-mail">
+          <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a> </div>
+      
+      
+      <div class="footer-phone">
+          <i class="fas fa-phone"></i> 8888888888 
+      </div>
+      
+  </div>
+
+
+<p class="copyright meta">Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved.</p>
+
+</div>
+</footer></main>
+    </body>
+    <script src=https://www.example.com/js/navbutton.js></script>
+</html>
