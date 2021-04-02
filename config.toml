@@ -3,7 +3,7 @@
 #title = "Sitio File Hugo"
 #theme = "npq"
 #publishDir = "docs"
-baseURL = "https://www.example.com"
+baseURL = "https://luis-salinas-sd.github.io/file/"
 languageCode = "en-us"
 title = "- Javascript -"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
