@@ -26,8 +26,8 @@
             <a href="/file/"
                 
             >
-                <i class="fas fa-home fa-sm"></i>
-                <span>home</span>
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>php</span>
             </a>
         
             		
@@ -35,7 +35,7 @@
                 
             >
                 <i class="fas fa-keyboard fa-ms"></i>
-                <span>blog</span>
+                <span>Javascript</span>
             </a>
         
     </nav>
@@ -49,14 +49,10 @@
       
     <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#función-constructura">Función Constructura</a></li>
-      </ul>
-    </li>
+    <li><a href="#función-constructura">Función Constructura</a></li>
   </ul>
 </nav>
-    <h3 id="función-constructura">Función Constructura</h3>
+    <h2 id="función-constructura">Función Constructura</h2>
 <p>A continuación se muestra una función constructora de objetos, viendo asi cómo podemos construir un objeto o varios a traves de una función.</p>
 <blockquote>
 <p>Es importante mencionar que en una <strong>función constructora</strong> el <strong>metodo</strong> de esta debe de iniciar con <strong>this.nombre_metodo</strong>.</p>
@@ -64,28 +60,28 @@
 <ul>
 <li>Función Constructora:</li>
 </ul>
-<pre><code>function Curso(titulo, duracion, formato) {
-    //! Propiedades/Atributos
-    this.titulo = titulo;
-    this.duracion = duracion;
-    this.formato = formato;
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Curso</span><span class="p">(</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">duracion</span><span class="p">,</span> <span class="nx">formato</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//! Propiedades/Atributos
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">titulo</span> <span class="o">=</span> <span class="nx">titulo</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">duracion</span> <span class="o">=</span> <span class="nx">duracion</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">formato</span> <span class="o">=</span> <span class="nx">formato</span><span class="p">;</span>
 
-    //! Metodo
-    this.inscribir = function (usuario) {
-        console.log(usuario + &quot;Está Inscrito&quot;);
-    }
-}
-</code></pre><ul>
+    <span class="c1">//! Metodo
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">inscribir</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">usuario</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">usuario</span> <span class="o">+</span> <span class="s2">&#34;Está Inscrito&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><ul>
 <li>Creación de un objeto apartir de una función constructora:</li>
 </ul>
-<pre><code>let cursoJavaScript = new Curso(&quot;curso java pro&quot;, &quot;5hrs&quot;, &quot;Mp4&quot;);
-let cursoRuby = new Curso(&quot;Curso de Ruby Pro&quot;);
-</code></pre><ul>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">cursoJavaScript</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Curso</span><span class="p">(</span><span class="s2">&#34;curso java pro&#34;</span><span class="p">,</span> <span class="s2">&#34;5hrs&#34;</span><span class="p">,</span> <span class="s2">&#34;Mp4&#34;</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">cursoRuby</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Curso</span><span class="p">(</span><span class="s2">&#34;Curso de Ruby Pro&#34;</span><span class="p">);</span>
+</code></pre></div><ul>
 <li>Mandar a llamar el objeto con sus <strong>propiedades/atributos</strong>:</li>
 </ul>
-<pre><code>console.log(cursoJavaScript.titulo, cursoJavaScript.duracion, cursoJavaScript.formato);
-console.log(cursoRuby.titulo);
-</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cursoJavaScript</span><span class="p">.</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">cursoJavaScript</span><span class="p">.</span><span class="nx">duracion</span><span class="p">,</span> <span class="nx">cursoJavaScript</span><span class="p">.</span><span class="nx">formato</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cursoRuby</span><span class="p">.</span><span class="nx">titulo</span><span class="p">);</span>
+</code></pre></div>
     
     <div class="nav-next-prev">
         <div class="nav-prev">

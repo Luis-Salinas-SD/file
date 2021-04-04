@@ -24,16 +24,21 @@ publishDir = "docs"
   formspreeID = "yourformspreeID"
 
 [menu]
+#  [[menu.main]]
+#    name = "home"
+#    pre = "<i class=\"fas fa-home fa-sm\"></i>"
+#    url = "/"
+#    weight = -9 
   [[menu.main]]
-    name = "home"
-    pre = "<i class=\"fas fa-home fa-sm\"></i>"
-    url = "/"
-    weight = -9 
-  [[menu.main]]
-    name = "blog"
+    name = "Javascript"
     pre = "<i class=\"fas fa-keyboard fa-ms\"></i>"
     url = "/javascript/"
     weight = -8
+  [[menu.main]]
+    name = "php"
+    pre = "<i class=\"fas fa-keyboard fa-ms\"></i>"
+    url = "/"
+    weight = -10
 #  [[menu.main]]
 #    name = "tags"
 #    pre = "<i class=\"fas fa-tags fa-ms\"></i>"

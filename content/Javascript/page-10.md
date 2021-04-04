@@ -1,10 +1,11 @@
 +++
-title = "Clases"
+title = "Clases y Herencia"
 chapter = true
 weight = 10
 pre = "<b>10. </b>"
+
 +++
-### Clases
+## Clases
 Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para **crear objetos y lidiar con la herencia.**
 
 - Las **clases** son un modelo a seguir
@@ -15,7 +16,7 @@ Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintá
 - Las clases no reciben parametros.
 - Las clases tienen un metodo especial que se llama **constructor** y recibe las propiedades del objeto, este se ejecuta en el momento de instanciar la clase.
 
-~~~
+~~~javascript
 // ++++++++++ clase ++++++++++
 class Perro{
     // ++++++++++ constructor ++++++++++
@@ -37,12 +38,12 @@ console.log(simba);	//mandar a llamar al objeto
 simba.ladrad();	// mandar a llamar al metodo
 ~~~
 
-### Herencia
+## Herencia
 
 Para utilizar herencia se necesita la palabra reservada **extends** seguido de la clase padre o de la que quiere que herede.
 
 la palabra reservada **super()** manda a llamar al constructor de la calse padre.
-~~~
+~~~javascript
 class Perro {
     // ++++++++++ constructor ++++++++++
     constructor(nombre, genero) {

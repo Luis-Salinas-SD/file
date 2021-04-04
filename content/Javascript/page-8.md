@@ -1,4 +1,4 @@
-  +++
++++
 title = "Objetos - JSON"
 chapter = true
 weight = 8
@@ -7,6 +7,12 @@ pre = "<b>8. </b>"
 ### Objetos - JSON
 
 Declaración de un objeto JSON
+~~~javascript
+const objeto = {
+	propiedad: 'valor',
+	propiedad2: 'valor2'
+}
+~~~
 
 Puede recibir diferentes valores como:
 - arreglos
@@ -15,7 +21,7 @@ Puede recibir diferentes valores como:
 - booleans
 - enteros
 - strings
-~~~
+~~~javascript
 let video = {
     titulo: "piloto",
     duración: 2,
@@ -33,7 +39,7 @@ let video = {
 > Dentro de un objeto **las funciones** son llamadas **metodos**.
 
 De acuerdo al objeto anterior esto es lo que podemos hacer.
-~~~
+~~~javascript
 //! invocar una propiedad del objeto.
 console.log(video.arreglo);
 

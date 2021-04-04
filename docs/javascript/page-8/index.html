@@ -26,8 +26,8 @@
             <a href="/file/"
                 
             >
-                <i class="fas fa-home fa-sm"></i>
-                <span>home</span>
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>php</span>
             </a>
         
             		
@@ -35,7 +35,7 @@
                 
             >
                 <i class="fas fa-keyboard fa-ms"></i>
-                <span>blog</span>
+                <span>Javascript</span>
             </a>
         
     </nav>
@@ -58,7 +58,11 @@
 </nav>
     <h3 id="objetos---json">Objetos - JSON</h3>
 <p>Declaración de un objeto JSON</p>
-<p>Puede recibir diferentes valores como:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">objeto</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="nx">propiedad</span><span class="o">:</span> <span class="s1">&#39;valor&#39;</span><span class="p">,</span>
+	<span class="nx">propiedad2</span><span class="o">:</span> <span class="s1">&#39;valor2&#39;</span>
+<span class="p">}</span>
+</code></pre></div><p>Puede recibir diferentes valores como:</p>
 <ul>
 <li>arreglos</li>
 <li>objetos</li>
@@ -67,39 +71,39 @@
 <li>enteros</li>
 <li>strings</li>
 </ul>
-<pre><code>let video = {
-    titulo: &quot;piloto&quot;,
-    duración: 2,
-    formato: &quot;avi&quot;,
-    //!arreglo
-    arreglo: [&quot;uno&quot;, &quot;dos&quot;, &quot;tres&quot;],
-    //!metodo
-    inscribir: function (usuario) {
-        console.log(usuario + &quot; Esta inscrito&quot;);
-    }
-}
-</code></pre><blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">video</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">titulo</span><span class="o">:</span> <span class="s2">&#34;piloto&#34;</span><span class="p">,</span>
+    <span class="nx">duración</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nx">formato</span><span class="o">:</span> <span class="s2">&#34;avi&#34;</span><span class="p">,</span>
+    <span class="c1">//!arreglo
+</span><span class="c1"></span>    <span class="nx">arreglo</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;uno&#34;</span><span class="p">,</span> <span class="s2">&#34;dos&#34;</span><span class="p">,</span> <span class="s2">&#34;tres&#34;</span><span class="p">],</span>
+    <span class="c1">//!metodo
+</span><span class="c1"></span>    <span class="nx">inscribir</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">usuario</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">usuario</span> <span class="o">+</span> <span class="s2">&#34; Esta inscrito&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><blockquote>
 <p>Dentro de una objeto <strong>las variables</strong> son llamada <strong>propiedades o atributos.</strong></p>
 </blockquote>
 <blockquote>
 <p>Dentro de un objeto <strong>las funciones</strong> son llamadas <strong>metodos</strong>.</p>
 </blockquote>
 <p>De acuerdo al objeto anterior esto es lo que podemos hacer.</p>
-<pre><code>//! invocar una propiedad del objeto.
-console.log(video.arreglo);
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//! invocar una propiedad del objeto.
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">video</span><span class="p">.</span><span class="nx">arreglo</span><span class="p">);</span>
 
-//! Invocar el metodo
-video.inscribir(&quot;Juan&quot;);
+<span class="c1">//! Invocar el metodo
+</span><span class="c1"></span><span class="nx">video</span><span class="p">.</span><span class="nx">inscribir</span><span class="p">(</span><span class="s2">&#34;Juan&#34;</span><span class="p">);</span>
 
-//! Editar alguna propiedad de nuestro objeto
-video.titulo = &quot;Prueba&quot;;
-console.log(video.titulo);
+<span class="c1">//! Editar alguna propiedad de nuestro objeto
+</span><span class="c1"></span><span class="nx">video</span><span class="p">.</span><span class="nx">titulo</span> <span class="o">=</span> <span class="s2">&#34;Prueba&#34;</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">video</span><span class="p">.</span><span class="nx">titulo</span><span class="p">);</span>
 
-//! Editar alguna metodo de nuestro objeto
-video.inscribir = function () {
-    console.log(&quot;hola soy la funcion editada&quot;);
-}
-</code></pre>
+<span class="c1">//! Editar alguna metodo de nuestro objeto
+</span><span class="c1"></span><span class="nx">video</span><span class="p">.</span><span class="nx">inscribir</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hola soy la funcion editada&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
     
     <div class="nav-next-prev">
         <div class="nav-prev">

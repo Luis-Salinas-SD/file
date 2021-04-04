@@ -81,20 +81,20 @@ arreglo.forEach(elemento => {console.log(elemento);});
 ~~~
 ### some
 
-5 **some**devuelve true en caso de que el elemento se encuentre en el arreglo
+5 **some** devuelve true en caso de que el elemento se encuentre en el arreglo.
 ~~~javascript
 console.log(arreglo.some(el => el === 45));
 ~~~
 ### filter
 
-6 **filter()** sirve para eliminar un elemento del arreglo
+6 **filter()** sirve para eliminar un elemento del arreglo.
 ~~~javascript
 arreglo = arreglo.filter((del)=> del != 42)
 console.log(arreglo);
 ~~~
 ### find
 
-7 **find()** metodo para buscar un elemento dentro del arreglo
+7 **find()** metodo para buscar un elemento dentro del arreglo.
 ~~~javascript
 elemento = arreglo.find( num => num === 10)
 console.log(elemento);
