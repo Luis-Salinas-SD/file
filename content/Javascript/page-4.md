@@ -1,12 +1,12 @@
 +++
-title = "Funciones y Closure"
+title = "Funciones, Closure y Callback"
 chapter = true
 weight = 4
 pre = "<b>4. </b>"
 
 +++
 
-### Funciones y Closure
+## Funciones Closure y callbacks
 
 - La definición de una función consiste de la palabra clave (reservada) function, seguida por:
   - El **nombre** de la función (opcional).
@@ -22,7 +22,7 @@ function cuadrado(number) {
 
 ### Funciones **declarativas** y **anónimas**
 
-#### Funciones Declarativas:
+### Funciones Declarativas:
 
 - En las funciones declarativas, utilizamos la palabra reservada **function** al inicio para poder declarar la función:
 
@@ -34,7 +34,7 @@ function saludar(nombre) {
 saludar("Diego");
 ```
 
-#### Funciones Anónimas:
+### Funciones Anónimas:
 
 - La declaración se inicia con la palabra reservada (**var, let, const**), donde se generará una variable que guardará un función anónima.
 
@@ -79,9 +79,9 @@ function cuadrado(numero) {
 console.log(cuadrado(5));
 ```
 
-### Closure
-
-Un closure es una función dentro de otra funcion que está disponible sólo dentro del cuerpo de esa fucnión y que tiene accesos a las variables de la función dónde fue declarda.
+## Closure
+### Definicion:
+Un closure es una **función dentro de otra funcion** que está disponible sólo dentro del cuerpo de esa fucnión y que tiene accesos a las variables de la función dónde fue declarda(funcion padre).
 
 - sintaxis
 
@@ -97,36 +97,67 @@ function iniciar() {
 }
 iniciar();
 ```
+### Ámbito Léxico
+Las funciones tienen su propio ámbito léxico, lo que depende de **cómo son declaradas y no de cúando se ejecutan.**
 
-#### otros ejemplos de closure
-
+**Cómo funciona el ámbito léxico.**
+El compilador de comprueba si la variable ésta declarada dentro de la función dónde se invocó y **si no** la busca en el ámbito de la funcion que la contenta y así hasta llegar al ámbito global.
 ```javascript
-// Funcion 1 () Closure
-function fun1() {
-  fun2();
+function padre() {
+    let name = "Luisin"; //variable en el ámbito lexico de la funcion padre.
+
+    function hijo() {
+
+        function hijo2() {
+            console.log("Bienvenido " + name);
+        } hijo2()
+    }
+    hijo()
 }
-fun1(fun2);
-// Funcion 2
-function fun2() {
-  console.log("Adios mundo");
-}
+padre()
 ```
+### Ejemplo de closure
+
+Ejemplo 1: Contador
 
 ```javascript
-function accion(hablar) {
-  hablar();
+function crearContador() {
+  let contador = 0;
+  return function incrementar() {
+    contador = contador + 1;
+    return contador;
+  };
 }
-function decirHola() {
-  console.log("hola amicos");
-}
-accion(decirHola);
+const result = crearContador();
 ```
-
+Ejemplo 2: Suma de dos numeros.
 ```javascript
-function accion(hablar) {
-  hablar();
+function fext(par1, par2, par3) {
+    let variableLocal = 95;
+    return function fint() {
+        return `El resultado de ${par1} más ${variableLocal} es igual a: ` + (par1 + variableLocal)
+    }
 }
-accion(function decirHola() {
-  console.log("hola amicos como estan");
-});
+var l = fext(5, 1, 1);
+
+console.log(l());
+```
+## Callback
+Un callback es una **function** que se pasa a otra fucntion como un ***parametro***, y la accion a realizar la ejecute la función que recibe nuestro parametro.
+
+
+
+- El ejemplo siguiente es una **callback** sincrónica, ya que se ejecuta inmediatamnete.
+```javascript
+function saludo(nombre) {
+  console.log('Hola ' + nombre +' estas en la funcion 1');
+}
+
+//callback
+
+function proceso(argumento) {
+  var nombre = 'Luis';
+  argumento(nombre);
+}
+proceso(saludo);
 ```

@@ -71,61 +71,59 @@
 <li>Las clases tienen un metodo especial que se llama <strong>constructor</strong> y recibe las propiedades del objeto, este se ejecuta en el momento de instanciar la clase.</li>
 </ul>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// ++++++++++ clase ++++++++++
-</span><span class="c1"></span><span class="kr">class</span> <span class="nx">Perro</span><span class="p">{</span>
-    <span class="c1">// ++++++++++ constructor ++++++++++
-</span><span class="c1"></span>    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="nx">genero</span><span class="p">){</span>
-        <span class="c1">//atributos
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">=</span> <span class="nx">nombre</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">genero</span> <span class="o">=</span> <span class="nx">genero</span><span class="p">;</span>
-    <span class="p">}</span><span class="c1">// ++++++++++ constructor ++++++++++
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">Perro</span> <span class="p">{</span>
+  <span class="c1">// ++++++++++ constructor ++++++++++
+</span><span class="c1"></span>  <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//atributos
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">=</span> <span class="nx">nombre</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">genero</span> <span class="o">=</span> <span class="nx">genero</span><span class="p">;</span>
+  <span class="p">}</span> <span class="c1">// ++++++++++ constructor ++++++++++
 </span><span class="c1"></span>
-    <span class="c1">//++++++++++ Metodo ++++++++++
-</span><span class="c1"></span>    <span class="nx">ladrad</span><span class="p">(){</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Guaf Guaf&#34;</span><span class="p">);</span>
-    <span class="p">}</span><span class="c1">//++++++++++ Metodo ++++++++++
-</span><span class="c1"></span>    
-<span class="p">}</span><span class="c1">// ++++++++++ clase ++++++++++
+  <span class="c1">//++++++++++ Metodo ++++++++++
+</span><span class="c1"></span>  <span class="nx">ladrad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Guaf Guaf&#34;</span><span class="p">);</span>
+  <span class="p">}</span> <span class="c1">//++++++++++ Metodo ++++++++++
+</span><span class="c1"></span><span class="p">}</span> <span class="c1">// ++++++++++ clase ++++++++++
 </span><span class="c1"></span>
-<span class="kr">const</span> <span class="nx">simba</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Perro</span><span class="p">(</span><span class="s2">&#34;simba&#34;</span><span class="p">,</span><span class="s2">&#34;macho&#34;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">simba</span><span class="p">);</span>	<span class="c1">//mandar a llamar al objeto
-</span><span class="c1"></span><span class="nx">simba</span><span class="p">.</span><span class="nx">ladrad</span><span class="p">();</span>	<span class="c1">// mandar a llamar al metodo
+<span class="kr">const</span> <span class="nx">simba</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Perro</span><span class="p">(</span><span class="s2">&#34;simba&#34;</span><span class="p">,</span> <span class="s2">&#34;macho&#34;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">simba</span><span class="p">);</span> <span class="c1">//mandar a llamar al objeto
+</span><span class="c1"></span><span class="nx">simba</span><span class="p">.</span><span class="nx">ladrad</span><span class="p">();</span> <span class="c1">// mandar a llamar al metodo
 </span></code></pre></div><h2 id="herencia">Herencia</h2>
 <p>Para utilizar herencia se necesita la palabra reservada <strong>extends</strong> seguido de la clase padre o de la que quiere que herede.</p>
 <p>la palabra reservada <strong>super()</strong> manda a llamar al constructor de la calse padre.</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Perro</span> <span class="p">{</span>
-    <span class="c1">// ++++++++++ constructor ++++++++++
-</span><span class="c1"></span>    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">//atributos
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">=</span> <span class="nx">nombre</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">genero</span> <span class="o">=</span> <span class="nx">genero</span><span class="p">;</span>
-    <span class="p">}</span> <span class="c1">// ++++++++++ constructor ++++++++++
+  <span class="c1">// ++++++++++ constructor ++++++++++
+</span><span class="c1"></span>  <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//atributos
+</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">nombre</span> <span class="o">=</span> <span class="nx">nombre</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">genero</span> <span class="o">=</span> <span class="nx">genero</span><span class="p">;</span>
+  <span class="p">}</span> <span class="c1">// ++++++++++ constructor ++++++++++
 </span><span class="c1"></span>
-    <span class="c1">//++++++++++ Metodo ++++++++++
-</span><span class="c1"></span>    <span class="nx">ladrad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">` guaf guaf mi nombre es </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="nx">caminar</span><span class="p">(){</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Toy caminando&#34;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="c1">//++++++++++ Metodo ++++++++++
+  <span class="c1">//++++++++++ Metodo ++++++++++
+</span><span class="c1"></span>  <span class="nx">ladrad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">` guaf guaf mi nombre es </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">caminar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Toy caminando&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="c1">//++++++++++ Metodo ++++++++++
 </span><span class="c1"></span><span class="p">}</span> <span class="c1">// ++++++++++ clase ++++++++++
 </span><span class="c1"></span>
 <span class="kr">const</span> <span class="nx">simba</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Perro</span><span class="p">(</span><span class="s2">&#34;simba&#34;</span><span class="p">,</span> <span class="s2">&#34;macho&#34;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">simba</span><span class="p">);</span><span class="c1">//! mandar a llamar al objeto
-</span><span class="c1"></span><span class="nx">simba</span><span class="p">.</span><span class="nx">ladrad</span><span class="p">();</span><span class="c1">//! mandar a llamar al metodo
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">simba</span><span class="p">);</span> <span class="c1">//! mandar a llamar al objeto
+</span><span class="c1"></span><span class="nx">simba</span><span class="p">.</span><span class="nx">ladrad</span><span class="p">();</span> <span class="c1">//! mandar a llamar al metodo
 </span><span class="c1"></span>
-
 <span class="c1">// ############ HERENCIA ##########
-</span><span class="c1"></span><span class="kr">class</span> <span class="nx">Gato</span> <span class="kr">extends</span> <span class="nx">Perro</span><span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">,</span> <span class="nx">color</span><span class="p">){</span>
-        <span class="kr">super</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">ladrad</span><span class="p">(){</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`miau miau mi nombre es </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="p">}</span>
+</span><span class="c1"></span><span class="kr">class</span> <span class="nx">Gato</span> <span class="kr">extends</span> <span class="nx">Perro</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">,</span> <span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span> <span class="nx">genero</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">ladrad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`miau miau mi nombre es </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+  <span class="p">}</span>
 <span class="p">}</span>
-<span class="kr">const</span> <span class="nx">beto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gato</span><span class="p">(</span><span class="s2">&#34;beto&#34;</span><span class="p">,</span><span class="s2">&#34;hembra&#34;</span><span class="p">,</span><span class="s2">&#34;blanco&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">beto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gato</span><span class="p">(</span><span class="s2">&#34;beto&#34;</span><span class="p">,</span> <span class="s2">&#34;hembra&#34;</span><span class="p">,</span> <span class="s2">&#34;blanco&#34;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">beto</span><span class="p">);</span>
 <span class="nx">beto</span><span class="p">.</span><span class="nx">ladrad</span><span class="p">();</span>
 <span class="nx">beto</span><span class="p">.</span><span class="nx">caminar</span><span class="p">();</span>

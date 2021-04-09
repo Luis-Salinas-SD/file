@@ -42,12 +42,12 @@ if  condicion if  if (24 === 24 || &amp;#34;hola&amp;#34; === &amp;#34;hola&amp;
     </item>
     
     <item>
-      <title>Funciones y Closure</title>
+      <title>Funciones, Closure y Callback</title>
       <link>https://luis-salinas-sd.github.io/file/javascript/page-4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://luis-salinas-sd.github.io/file/javascript/page-4/</guid>
-      <description>Funciones y Closure  La definición de una función consiste de la palabra clave (reservada) function, seguida por:  El nombre de la función (opcional). Una lista de argumentos para la función, encerrados entre paréntesis y separados por comas (,). Las sentencias JavaScript que definen la función, encerradas por llaves, { }.   Ejemplo:  function cuadrado(number) { return number * number; } Funciones declarativas y anónimas Funciones Declarativas:  En las funciones declarativas, utilizamos la palabra reservada function al inicio para poder declarar la función:  function saludar(nombre) { console.</description>
+      <description>Funciones Closure y callbacks  La definición de una función consiste de la palabra clave (reservada) function, seguida por:  El nombre de la función (opcional). Una lista de argumentos para la función, encerrados entre paréntesis y separados por comas (,). Las sentencias JavaScript que definen la función, encerradas por llaves, { }.   Ejemplo:  function cuadrado(number) { return number * number; } Funciones declarativas y anónimas Funciones Declarativas:  En las funciones declarativas, utilizamos la palabra reservada function al inicio para poder declarar la función:  function saludar(nombre) { console.</description>
     </item>
     
     <item>
