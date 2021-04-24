@@ -117,6 +117,20 @@ const objeto = { propiedad: &amp;#39;valor&amp;#39;, propiedad2: &amp;#39;valor2
     </item>
     
     <item>
+      <title>Promesas</title>
+      <link>https://luis-salinas-sd.github.io/file/javascript/page-11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://luis-salinas-sd.github.io/file/javascript/page-11/</guid>
+      <description>Promesas Las promesas en Javascript son utilizadas en Javascript para gestionar el codigo asíncrono.
+Sincrono La instrucción se ejecutrá en secuencia hasta terminar.
+Asíncrono Puede que algunas instrucciones se ejecuten a destiempo.
+Estados de una promesa. Las promesas tienen 3 estados.
+ se cumple (fulfilled). no se cumple (rejected). pendiente (pending).  Estructura Una promesa recibe como parametro una función con 2 parametros(resolve,reject).
+var myPromise = new Promise( (resolve,reject)=&amp;gt;{ if(/* condicion */) { resolve(&amp;#39;Success!</description>
+    </item>
+    
+    <item>
       <title>get in touch</title>
       <link>https://luis-salinas-sd.github.io/file/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

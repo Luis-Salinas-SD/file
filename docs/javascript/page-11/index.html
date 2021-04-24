@@ -26,8 +26,8 @@
             <a href="/file/"
                 
             >
-                <i class="fas fa-home fa-sm"></i>
-                <span>home</span>
+                <i class="fas fa-keyboard fa-ms"></i>
+                <span>php</span>
             </a>
         
             		
@@ -35,7 +35,7 @@
                 
             >
                 <i class="fas fa-keyboard fa-ms"></i>
-                <span>blog</span>
+                <span>Javascript</span>
             </a>
         
     </nav>
@@ -44,93 +44,89 @@
             <a href="javascript:void(0)" id="closebtn" onclick="navToggle()"><i class="fas fa-bars fa-lg"></i></a>
             <div class="content">
     
-    <h1 id="title">Clases 2.0</h1>
+    <h1 id="title">Promesas</h1>
     
       
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#promesas">Promesas</a>
       <ul>
-        <li><a href="#clases">Clases</a></li>
-        <li><a href="#declaración-de-una-clase">Declaración de una clase</a></li>
-        <li><a href="#herencia">Herencia</a></li>
+        <li><a href="#sincrono">Sincrono</a></li>
+        <li><a href="#asíncrono">Asíncrono</a></li>
+      </ul>
+    </li>
+    <li><a href="#estados-de-una-promesa">Estados de una promesa.</a></li>
+    <li><a href="#estructura">Estructura</a>
+      <ul>
+        <li><a href="#metodos">Metodos</a></li>
       </ul>
     </li>
   </ul>
 </nav>
-    <h3 id="clases">Clases</h3>
-<p>Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para <strong>crear objetos y lidiar con la herencia.</strong></p>
+    <h2 id="promesas">Promesas</h2>
+<p>Las <strong>promesas</strong> en Javascript son utilizadas en Javascript para gestionar el codigo asíncrono.</p>
+<h3 id="sincrono">Sincrono</h3>
+<p>La instrucción se ejecutrá en secuencia hasta terminar.</p>
+<h3 id="asíncrono">Asíncrono</h3>
+<p>Puede que algunas instrucciones se ejecuten a destiempo.</p>
+<h2 id="estados-de-una-promesa">Estados de una promesa.</h2>
+<p>Las promesas tienen 3 estados.</p>
 <ul>
-<li>Las <strong>clases</strong> son un modelo a seguir</li>
-<li>Un <strong>objeto</strong> es una instancia de una clase</li>
-<li>Los <strong>atributos</strong> son las caracateristicas o propiedades de objetos</li>
-<li>Los <strong>métodos</strong> son acciónes (funciones) que un objeto puede realizar</li>
+<li>se cumple (fulfilled).</li>
+<li>no se cumple (rejected).</li>
+<li>pendiente (pending).</li>
 </ul>
-<h3 id="declaración-de-una-clase">Declaración de una clase</h3>
+<h2 id="estructura">Estructura</h2>
+<p>Una promesa recibe como parametro <strong>una función con 2 parametros</strong>(<em>resolve,reject</em>).</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myPromise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="nx">reject</span><span class="p">)=&gt;{</span>
+    <span class="k">if</span><span class="p">(</span><span class="cm">/* condicion */</span><span class="p">)</span> <span class="p">{</span>
+   		<span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">);</span>
+ 	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+   		 <span class="nx">reject</span><span class="p">(</span><span class="s1">&#39;Failure!&#39;</span><span class="p">);</span>
+ 	<span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span><span class="c1">//promesa
+</span><span class="c1"></span>
+<span class="c1">//Mandar a llamarla.
+</span><span class="c1"></span><span class="nx">myPromise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">){</span>
+    <span class="c1">//hacer algo en el resolve.
+</span><span class="c1"></span><span class="p">}.</span><span class="k">catch</span><span class="p">(</span><span class="nx">fucntion</span><span class="p">(){</span>
+	<span class="c1">//hacer algo en el reject.     
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div><h3 id="metodos">Metodos</h3>
+<p>Las promesas en Javascript se representan a traves de un <code>object</code> y se pueden utilizar los siguientes metodos.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.then(<code>function</code> resolve)</td>
+<td>Ejecuta la función callback <code>resolve</code> cuando la promesa se cumple.</td>
+</tr>
+<tr>
+<td>.catch(<code>function</code> reject)</td>
+<td>Ejecuta la función callback <code>reject</code> cuando la promesa se rechaza.</td>
+</tr>
+<tr>
+<td>.catch(<code>function</code> resolve <code>function</code> reject)</td>
+<td>Método equivalente a las dos anteriores en el mismo <code>.then()</code>.</td>
+</tr>
+<tr>
+<td>.finally(<code>function</code> end)</td>
+<td>Ejecuta la función callback <code>end</code> tanto si se cumple como si se rechaza.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Podemos encontrar más informacion en la siguiente liga:</em></p>
 <ul>
-<li>Las clases no reciben parametros.</li>
-<li>Las clases tienen un metodo especial que se llama <strong>constructor</strong> y recibe las propiedades del objeto, este se ejecuta en el momento de instanciar la clase.</li>
+<li><a href="https://lenguajejs.com/javascript/asincronia/promesas/">Javascript - promises</a></li>
 </ul>
-<pre><code>// ++++++++++ clase ++++++++++
-class Perro{
-    // ++++++++++ constructor ++++++++++
-    constructor(nombre,genero){
-        //atributos
-        this.nombre = nombre;
-        this.genero = genero;
-    }// ++++++++++ constructor ++++++++++
 
-    //++++++++++ Metodo ++++++++++
-    ladrad(){
-        console.log(&quot;Guaf Guaf&quot;);
-    }//++++++++++ Metodo ++++++++++
-    
-}// ++++++++++ clase ++++++++++
-
-const simba = new Perro(&quot;simba&quot;,&quot;macho&quot;);
-console.log(simba);	//mandar a llamar al objeto
-simba.ladrad();	// mandar a llamar al metodo
-</code></pre><h3 id="herencia">Herencia</h3>
-<p>Para utilizar herencia se necesita la palabra reservada <strong>extends</strong> seguido de la clase padre o de la que quiere que herede.</p>
-<p>la palabra reservada <strong>super()</strong> manda a llamar al constructor de la calse padre.</p>
-<pre><code>class Perro {
-    // ++++++++++ constructor ++++++++++
-    constructor(nombre, genero) {
-        //atributos
-        this.nombre = nombre;
-        this.genero = genero;
-    } // ++++++++++ constructor ++++++++++
-
-    //++++++++++ Metodo ++++++++++
-    ladrad() {
-        console.log(` guaf guaf mi nombre es ${this.nombre}`);
-    }
-    caminar(){
-        console.log(&quot;Toy caminando&quot;);
-    }
-    //++++++++++ Metodo ++++++++++
-} // ++++++++++ clase ++++++++++
-
-const simba = new Perro(&quot;simba&quot;, &quot;macho&quot;);
-console.log(simba);//! mandar a llamar al objeto
-simba.ladrad();//! mandar a llamar al metodo
-
-
-// ############ HERENCIA ##########
-class Gato extends Perro{
-    constructor(nombre, genero, color){
-        super(nombre, genero);
-        this.color = color;
-    }
-    ladrad(){
-        console.log(`miau miau mi nombre es ${this.nombre}`);
-    }
-}
-const beto = new Gato(&quot;beto&quot;,&quot;hembra&quot;,&quot;blanco&quot;);
-console.log(beto);
-beto.ladrad();
-beto.caminar();
-</code></pre>
     
     <div class="nav-next-prev">
         <div class="nav-prev">
